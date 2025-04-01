@@ -54,17 +54,17 @@ mvn spring-boot:run
  ├── 📁 src
  │   ├── 📂 main
  │   │   ├── 📂 java/com/empresa/gestaocontatos
- │   │   │   ├── 📂 controllers   # Controladores da aplicação
- │   │   │   ├── 📂 models        # Modelos de entidades
- │   │   │   ├── 📂 repositories  # Camada de acesso ao banco
- │   │   │   ├── 📂 services      # Lógica de negócios
- │   │   │   ├── 📄 Application.java  # Classe principal
+ │   │   │   ├── 📂 controllers
+ │   │   │   ├── 📂 models
+ │   │   │   ├── 📂 repositories
+ │   │   │   ├── 📂 services
+ │   │   │   ├── 📄 Application.java
  │   ├── 📂 resources
- │   │   ├── 📄 application.properties  # Configurações do Spring Boot
- ├── 📄 database.sql        # Script para criação do banco
- ├── 📄 README.md           # Documentação
- ├── 📄 pom.xml             # Dependências do projeto
- ├── 📄 .gitignore          # Arquivos ignorados pelo Git
+ │   │   ├── 📄 application.properties
+ ├── 📄 database.sql
+ ├── 📄 README.md
+ ├── 📄 pom.xml
+ ├── 📄 .gitignore
 ```
 
 ##  Script SQL
