@@ -1,177 +1,194 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Visualizar Clientes</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            height: 100vh;
-            padding-top: 20px;
-        }
+      * {
+        font-family: "Poppins";
+      }
+      body {
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100vh;
+        padding-top: 20px;
+      }
 
-        header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+      header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
 
-        h1 {
-            color: #ff7f00;
-        }
+      h1 {
+        color: #ed6014;
+      }
 
-        main {
-            width: 80%;
-            max-width: 800px;
-            background-color: white;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
+      main {
+        width: 80%;
+        max-width: 800px;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
 
-        h2 {
-            color: #007bff;
-            margin-bottom: 15px;
-        }
+      h2 {
+        color: #2537fc;
+        margin-bottom: 15px;
+      }
 
-        label {
-            font-weight: bold;
-            margin-bottom: 5px;
-            display: block;
-        }
+      label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+      }
 
-        input[type="text"] {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
+      input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
 
-        button {
-            background-color: #ff7f00;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            margin: 10px 0;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
-        }
+      button {
+        background-color: #ed6014;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 10px 0;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+      }
 
-        button:hover {
-            background-color: #cc6600;
-        }
+      button:hover {
+        background-color: #cc6600;
+      }
 
-        #listaClientes {
-            margin-top: 20px;
-        }
+      #listaClientes {
+        margin-top: 20px;
+      }
 
-        footer {
-            margin-top: 20px;
-            text-align: center;
-            color: #007bff;
-        }
+      footer {
+        margin-top: 20px;
+        text-align: center;
+        color: #2537fc;
+      }
 
-        footer p {
-            margin: 0;
-        }
+      footer p {
+        margin: 0;
+      }
 
-        a {
-            color: #007bff;
-            text-decoration: none;
-            font-size: 16px;
-        }
+      a {
+        color: #2537fc;
+        text-decoration: none;
+        font-size: 16px;
+      }
 
-        a:hover {
-            text-decoration: underline;
-        }
+      a:hover {
+        text-decoration: underline;
+      }
 
+      #listaClientes div {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        background-color: #f9f9f9;
+      }
 
-        #listaClientes div {
-            border: 1px solid #ddd;
-            padding: 15px;
-            margin-bottom: 10px;
-            border-radius: 4px;
-            background-color: #f9f9f9;
-        }
+      #listaClientes h3 {
+        color: #333;
+        margin-bottom: 5px;
+      }
 
-        #listaClientes h3 {
-            color: #333;
-            margin-bottom: 5px;
-        }
+      #listaClientes p {
+        margin: 5px 0;
+      }
 
-        #listaClientes p {
-            margin: 5px 0;
-        }
+      #listaClientes ul {
+        list-style-type: none;
+        padding: 0;
+      }
 
-        #listaClientes ul {
-            list-style-type: none;
-            padding: 0;
-        }
+      #listaClientes li {
+        margin-bottom: 5px;
+      }
 
-        #listaClientes li {
-            margin-bottom: 5px;
-        }
+      #listaClientes a,
+      #listaClientes button.excluir-btn {
+        margin-right: 10px;
+      }
 
-        #listaClientes a, #listaClientes button.excluir-btn {
-            margin-right: 10px;
-        }
+      #listaClientes button.excluir-btn {
+        background-color: #d9534f;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
 
-        #listaClientes button.excluir-btn {
-            background-color: #d9534f;
-            color: white;
-            border: none;
-            padding: 8px 12px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        #listaClientes button.excluir-btn:hover {
-            background-color: #c9302c;
-        }
+      #listaClientes button.excluir-btn:hover {
+        background-color: #c9302c;
+      }
     </style>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header>
-    <h1>Visualizar Clientes</h1>
-    <a href="index.html">Voltar</a>
-</header>
-<main>
-    <section>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Visualizar Clientes</h1>
+      <a href="index.html">Voltar</a>
+    </header>
+    <main>
+      <section>
         <h2>Filtrar Clientes</h2>
         <form id="filtroClientesForm">
-            <div>
-                <label for="filtroNome">Nome:</label>
-                <input type="text" id="filtroNome" name="filtroNome" placeholder="Filtrar por nome">
-            </div>
-            <div>
-                <label for="filtroCpf">CPF:</label>
-                <input type="text" id="filtroCpf" name="filtroCpf" placeholder="Filtrar por CPF">
-            </div>
-            <button type="submit">Buscar</button>
+          <div>
+            <label for="filtroNome">Nome:</label>
+            <input
+              type="text"
+              id="filtroNome"
+              name="filtroNome"
+              placeholder="Filtrar por nome"
+            />
+          </div>
+          <div>
+            <label for="filtroCpf">CPF:</label>
+            <input
+              type="text"
+              id="filtroCpf"
+              name="filtroCpf"
+              placeholder="Filtrar por CPF"
+            />
+          </div>
+          <button type="submit">Buscar</button>
         </form>
-    </section>
+      </section>
 
-    <section>
+      <section>
         <h2>Lista de Clientes</h2>
-        <div id="listaClientes">
-        </div>
-    </section>
-</main>
-<footer>
-    <p>&copy; 2025 Gestão de Contatos</p>
-</footer>
-<script type="module" src="js/visualizar.js"></script>
-</body>
+        <div id="listaClientes"></div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Gestão de Contatos</p>
+    </footer>
+    <script type="module" src="js/visualizar.js"></script>
+  </body>
 </html>
