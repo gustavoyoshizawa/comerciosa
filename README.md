@@ -37,7 +37,7 @@ spring.jpa.hibernate.ddl-auto=update
 mvn spring-boot:run
 ```
 
-## 📜 Funcionalidades Implementadas
+##  Funcionalidades Implementadas
 - ✅ Cadastro de clientes (Nome, CPF, Data de Nascimento, Endereço)
 - ✅ Edição de clientes
 - ✅ Exclusão de clientes
@@ -48,7 +48,7 @@ mvn spring-boot:run
 - ✅ Exclusão de contatos
 - ✅ Listagem de contatos de um cliente específico
 
-## 📂 Estrutura do Projeto
+##  Estrutura do Projeto
 ```
 📂 sistema-gestao-contatos
  ├── 📁 src
