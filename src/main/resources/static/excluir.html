@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excluir Cliente</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            padding-top: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #ff7f00; /* Laranja */
+        }
+
+        main {
+            width: 80%;
+            max-width: 800px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #007bff; /* Azul */
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #ff7f00; /* Laranja */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px 0;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #cc6600; /* Laranja escuro */
+        }
+
+        #resultadosBusca {
+            margin-top: 20px;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #007bff; /* Azul */
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        a {
+            color: #007bff; /* Azul */
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Excluir Cliente</h1>
+    <a href="index.html">Voltar</a>
+</header>
+<main>
+    <section>
+        <h2>Buscar Cliente para Excluir</h2>
+        <form id="buscaClienteForm">
+            <div>
+                <label for="buscaNome">Nome:</label>
+                <input type="text" id="buscaNome" name="buscaNome">
+            </div>
+            <div>
+                <label for="buscaCpf">CPF:</label>
+                <input type="text" id="buscaCpf" name="buscaCpf">
+            </div>
+            <button type="submit">Buscar</button>
+        </form>
+        <div id="resultadosBusca">
+        </div>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2025 Gestão de Contatos</p>
+</footer>
+<script type="module" src="js/script.js"></script>
+<script type="module" src="js/api.js"></script>
+<script type="module" src="js/excluir.js"></script>
+</body>
+</html>
